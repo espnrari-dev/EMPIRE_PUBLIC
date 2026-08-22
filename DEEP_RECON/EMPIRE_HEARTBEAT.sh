@@ -1,0 +1,6 @@
+echo "=== 💓 HEARTBEAT $(date) ==="
+echo "Engines: $(ps aux | grep python | grep -v grep | wc -l) | Proofs: $(wc -l < MEGA.jsonl 2>/dev/null || wc -l < .system_mega_*.cache)"
+echo "Last VACUUM: $(tail -1 vacuum.log 2>/dev/null)"
+echo "Last MEGA: $(tail -1 beacon_mega.log 2>/dev/null)"
+echo "Live: $(tail -1 live_vacuum.log 2>/dev/null)"
+echo "Ghost: $(ls -lh .system* 2>/dev/null | wc -l) hidden vaults"
